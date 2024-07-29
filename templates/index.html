@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="static/styles.css">
+        <title>ascii-art-web</title>
+    </head>
+    <body>
+        <header>ascii-art-web</header>
+        <div class="form-container">
+        <form  action="/ascii-art" method="post">
+            <div class="text-container">
+            <label for="text"></label>
+            <textarea name="text" id="text" placeholder="enter the text you want to convert to ascii-art" required></textarea>
+            </div>
+            <div class="options-container">
+            <label for="banner"></label>
+            <select name="banner" id="banner" required>
+                <option selected value="standard.txt" >standard</option>
+                <option value="shadow.txt">shadow</option>
+                <option value="thinkertoy.txt">thinkertoy</option>
+                <option value="enigma.txt">enigma</option>
+                <option value="nirvana.txt">nirvana</option>
+                <option value="arial.txt">arial</option>
+            </select>
+            <label for="submit"></label>
+            <input type="submit" id="submit">
+        </div>
+            
+        </form>
+    </div>
+    <div class="art-container">
+        <pre>{{.}}</pre>
+    </div>
+    </body>
+</html>
